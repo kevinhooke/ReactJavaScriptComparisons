@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic / vanilla HTML and Javascript</title>
+
+<script>
+    function calculate(){
+        var calcResult = parseInt(document.getElementById('value1').value)
+            + parseInt(document.getElementById('value2').value);
+        document.getElementById('result').innerHTML = String(calcResult);
+    }
+</script>
+
+</head>
+<body>
+    <h2>Basic HTML and JavaScript example</h2>
+    <form>
+        <div>
+            <label>Value 1</label>
+            <input id="value1" type="text"/>
+        </div>
+        <div>
+            <label>Value 2</label>
+            <input id="value2" type="text"/>
+        </div>
+        <div>
+            <label>Result:</label>
+            <div id="result"></div>
+        </div>
+        <div>
+            <button onclick="calculate(); return false;">Calculate</button>
+        </div>
+
+    </form>
+
+
+</body>
+</html>

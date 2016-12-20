@@ -11,6 +11,7 @@ module.exports = {
         loaders: [
             {
                 test: /src\/.+.js$/,
+                recursive: true,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {

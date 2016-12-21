@@ -4,3 +4,4 @@ react-es5/.idea
 react-es5/node_modules
 react-es5/dist
 react-es5/.dist
+/npm-debug.log

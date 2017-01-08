@@ -3,6 +3,6 @@ var ReactDOM = require('react-dom');
 var App = require('./Containers/AppContainer');
 
 ReactDOM.render(
-    <App/>,
+    <App />,
     document.getElementById('app')
 );

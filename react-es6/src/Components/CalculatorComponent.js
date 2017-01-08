@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 
 var Calculator = React.createClass({
 
@@ -10,24 +11,16 @@ var Calculator = React.createClass({
         });
     },
 
-
-
-
-
-
     handleChangeValue1: function(e){
         this.setState({ value1 : e.target.value });
     },
-
     handleChangeValue2: function(e){
         this.setState({ value2 : e.target.value });
     },
-
     calculate : function(e){
         e.preventDefault();
         this.setState({ result : Number.parseInt(this.state.value1) + Number.parseInt(this.state.value2) });
     },
-
     render: function() {
         return (
             <form>
@@ -52,4 +45,6 @@ var Calculator = React.createClass({
     }
 });
 
+//es6: export default Calculator;
+//es5:
 module.exports = Calculator;

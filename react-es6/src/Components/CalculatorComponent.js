@@ -1,27 +1,34 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React, { Component } from 'react';
 
-var Calculator = React.createClass({
+class Calculator extends Component {
 
-    getInitialState : function(){
-        return({
+    constructor(props){
+        super(props);
+        this.state = {
             value1: this.props.value1,
             value2: this.props.value2,
             result: 0
-        });
-    },
+        }
 
-    handleChangeValue1: function(e){
+        this.handleChangeValue1 = this.handleChangeValue1.bind(this);
+        this.handleChangeValue2 = this.handleChangeValue2.bind(this);
+        this.calculate = this.calculate.bind(this);
+    }
+
+    handleChangeValue1(e) {
         this.setState({ value1 : e.target.value });
-    },
-    handleChangeValue2: function(e){
+    }
+
+    handleChangeValue2(e) {
         this.setState({ value2 : e.target.value });
-    },
-    calculate : function(e){
+    }
+
+    calculate(e){
         e.preventDefault();
         this.setState({ result : Number.parseInt(this.state.value1) + Number.parseInt(this.state.value2) });
-    },
-    render: function() {
+    }
+
+    render() {
         return (
             <form>
                 <div>
@@ -43,8 +50,6 @@ var Calculator = React.createClass({
             </form>
         );
     }
-});
+}
 
-//es6: export default Calculator;
-//es5:
-module.exports = Calculator;
+export default Calculator;

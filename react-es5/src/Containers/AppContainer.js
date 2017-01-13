@@ -13,7 +13,8 @@ var AppContainer = React.createClass({
 
     render: function () {
         return (
-            <Calculator value1={this.state.value1} value2={this.state.value2}/>
+            <Calculator value1={this.state.value1}
+                        value2={this.state.value2}/>
         );
     },
 });

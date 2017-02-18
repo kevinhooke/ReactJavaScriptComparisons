@@ -13,7 +13,8 @@ class AppContainer extends Component {
 
     render() {
         return (
-            <Calculator value1={this.state.value1} value2={this.state.value2}/>
+            <Calculator value1={this.state.value1}
+                        value2={this.state.value2}/>
         );
     }
 }

@@ -25,7 +25,8 @@ class Calculator extends Component {
 
     calculate(e){
         e.preventDefault();
-        this.setState({ result : Number.parseInt(this.state.value1) + Number.parseInt(this.state.value2) });
+        this.setState({ result : Number.parseInt(this.state.value1)
+            + Number.parseInt(this.state.value2) });
     }
 
     render() {
@@ -33,11 +34,15 @@ class Calculator extends Component {
             <form>
                 <div>
                     <label>Value 1</label>
-                    <input name="value1" type="text" onChange={this.handleChangeValue1} value={this.state.value1}/>
+                    <input name="value1" type="text"
+                           onChange={this.handleChangeValue1}
+                           value={this.state.value1}/>
                 </div>
                 <div>
                     <label>Value 2</label>
-                    <input name="value2" type="text" onChange={this.handleChangeValue2} value={this.state.value2}/>
+                    <input name="value2" type="text"
+                           onChange={this.handleChangeValue2}
+                           value={this.state.value2}/>
                 </div>
                 <div>
                     <label>Result:</label>

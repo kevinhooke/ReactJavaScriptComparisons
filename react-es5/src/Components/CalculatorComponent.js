@@ -49,7 +49,7 @@ var Calculator = React.createClass({
                     <div id="result">{this.state.result}</div>
                 </div>
                 <div>
-                    <button onClick={this.calculate}>Calculate</button>
+                    <button id="calcButton" onClick={this.calculate}>Calculate</button>
                 </div>
 
             </form>
